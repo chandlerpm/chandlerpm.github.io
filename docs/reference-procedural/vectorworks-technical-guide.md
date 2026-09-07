@@ -184,7 +184,7 @@ Double-click the title border on the sheet to access the Title Block Border Sett
 
 The information is added to the sheet and is available for the Drawing List.
 
-## Appendix A — title blocks
+## Appendix A — Title Blocks
 
 There are several title blocks in the project resources. Each relates to the phase of the project — AB, SD, and CD. They are all on Arch D sized paper.
 
@@ -251,7 +251,7 @@ If there is no revision date in the sheet title border, the sheet will not be in
 
 If there is a revision date, the worksheet will display the most recent revision.
 
-## Appendix B — working with viewports intended for sheets
+## Appendix B — Working with viewports intended for sheets
 
 You can use viewports on design layers. Follow steps 1, 2, 3 (but choose the design layer), 7, and 8 below.
 
@@ -280,7 +280,7 @@ To safely do this, select the viewport you want to move and change its sheet/des
 
 ![Viewport Object Info panel](/img/vectorworks-technical-guide/16-viewport-object-info.png)
 
-## Appendix C — sections
+## Appendix C — Sections
 
 When creating a new section, you'll want to have the viewport of the section already placed on a sheet, so you don't have to go back and edit the section marker. (There is a "Create Section Viewport" button, but that's if you're using 3D models.)
 
@@ -306,7 +306,7 @@ There's currently no way to do this and keep to the firm's documentation standar
 
 Select the section marker and update the information in the Object Info panel.
 
-## Appendix D — details
+## Appendix D — Details
 
 Details work in a very similar manner to section markers. They automatically coordinate with the viewport you choose/create. There is a Create Detail Viewport option in the View menu, but if you use it, the crop of the viewport will match the shape you draw and be linked to that shape — if you change the shape/size of the detail marker rectangle, the detail will also change. This can be quite useful, but keep it in mind.
 
@@ -332,7 +332,7 @@ Create your viewport per your desired method, then:
 3. Modify your area as needed.
 4. Deselect the detail marker.
 
-## Appendix E — interior elevation markers
+## Appendix E — Interior elevation markers
 
 ### To add an interior elevation marker
 
@@ -350,7 +350,7 @@ Create your viewport per your desired method, then:
 1. Select the marker.
 2. Use the Object Info panel to update the information.
 
-## Appendix F — room names
+## Appendix F — Room names
 
 ### To add a room name symbol
 
@@ -359,7 +359,7 @@ Create your viewport per your desired method, then:
 3. Click again to set the rotation.
 4. Edit the room name and dimensions in the Object Info panel.
 
-## Appendix G — reference markers
+## Appendix G — Reference markers
 
 In case you need one:
 
@@ -380,7 +380,7 @@ In case you need one:
 
 Select the reference marker and update the information in the Object Info panel.
 
-## Appendix H — symbols
+## Appendix H — Symbols
 
 This document has already gone over a few of the symbols you can add, including Sheet Scales and the Architect Stamp. There are a few more that can be useful, if you wish to use them.
 
@@ -409,7 +409,7 @@ Example:
 
 The basic box that shows what the shading means.
 
-## Appendix I — special cases
+## Appendix I — Special cases
 
 ### How to move the title block
 
@@ -421,7 +421,7 @@ The basic box that shows what the shading means.
 3. Adjust the Right border to a value that works for your sheet.
 4. Click **OK**.
 
-## Appendix J — things you probably shouldn't change/press/etc.
+## Appendix J — Things you shouldn't change/press/etc.
 
 ### Title block manager button in the Object Info panel
 
