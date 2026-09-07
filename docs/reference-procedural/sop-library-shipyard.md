@@ -1,5 +1,5 @@
 ---
-title: SOP Library: Shipyard CI/CD
+title: "SOP Library: Shipyard CI/CD"
 ---
 
 :::info Placeholder — not yet migrated

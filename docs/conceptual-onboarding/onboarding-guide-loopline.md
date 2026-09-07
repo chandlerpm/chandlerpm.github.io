@@ -1,5 +1,5 @@
 ---
-title: Onboarding Guide: Loopline
+title: "Onboarding Guide: Loopline"
 ---
 
 :::info Placeholder — not yet migrated

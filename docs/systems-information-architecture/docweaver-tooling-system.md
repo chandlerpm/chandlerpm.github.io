@@ -1,5 +1,5 @@
 ---
-title: DocWeaver: Documentation Tooling System
+title: "DocWeaver: Documentation Tooling System"
 ---
 
 :::info Placeholder — not yet migrated

@@ -1,5 +1,5 @@
 ---
-title: Sylva: Project Creation Feature Spec
+title: "Sylva: Project Creation Feature Spec"
 ---
 
 :::info Placeholder — not yet migrated
