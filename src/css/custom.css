@@ -452,18 +452,106 @@ blockquote {
   font-size: 1.05rem;
 }
 
-.admonition {
+/* Docusaurus wraps admonitions in .theme-admonition + Infima's .alert classes,
+   so both selectors are covered. Types are told apart by the left rule, not a fill. */
+.admonition,
+.theme-admonition,
+.alert {
+  --ifm-alert-background-color: transparent;
+  --ifm-alert-border-color: var(--classical-accent);
+  --ifm-alert-foreground-color: var(--classical-text);
+  --ifm-alert-border-left-width: 2px;
+  --ifm-alert-border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
+  --ifm-alert-shadow: none;
   border: 1px solid var(--ifm-hr-border-color);
   border-left: 2px solid var(--classical-accent);
   border-radius: 0 var(--ifm-global-radius) var(--ifm-global-radius) 0;
   background: transparent;
+  color: var(--classical-text);
+  box-shadow: none;
+  padding: 1.15rem 1.35rem;
 }
-.admonition-heading {
+
+.admonition-heading,
+.theme-admonition .admonition-heading,
+.alert h5 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--ifm-font-family-base);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--accent-700);
+  margin-bottom: 0.6rem;
+}
+.admonition-icon svg {
+  fill: var(--accent-700);
+  stroke: var(--accent-700);
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.admonition-content > :last-child,
+.alert > :last-child {
+  margin-bottom: 0;
+}
+.alert a,
+.admonition a {
+  color: var(--accent-700);
+  text-decoration-color: color-mix(in srgb, var(--classical-accent) 55%, transparent);
+}
+
+/* note / info / tip — the accent base */
+.theme-admonition-note,
+.theme-admonition-info,
+.theme-admonition-tip,
+.alert--secondary,
+.alert--info,
+.alert--success {
+  border-left-color: var(--classical-accent);
+}
+.theme-admonition-note .admonition-heading,
+.theme-admonition-info .admonition-heading,
+.theme-admonition-tip .admonition-heading,
+.alert--secondary h5,
+.alert--info h5,
+.alert--success h5 {
+  color: var(--accent-700);
+}
+
+/* caution / warning — one step deeper */
+.theme-admonition-caution,
+.theme-admonition-warning,
+.alert--warning {
+  border-left-color: var(--accent-700);
+  background: color-mix(in srgb, var(--classical-accent) 5%, transparent);
+}
+.theme-admonition-caution .admonition-heading,
+.theme-admonition-warning .admonition-heading,
+.alert--warning h5 {
+  color: var(--accent-800);
+}
+.theme-admonition-caution .admonition-icon svg,
+.theme-admonition-warning .admonition-icon svg {
+  fill: var(--accent-800);
+  stroke: var(--accent-800);
+}
+
+/* danger — ink, so it reads as the loudest without a second hue */
+.theme-admonition-danger,
+.alert--danger {
+  border-left-color: var(--neutral-900);
+  background: color-mix(in srgb, var(--classical-text) 4%, transparent);
+}
+.theme-admonition-danger .admonition-heading,
+.alert--danger h5 {
+  color: var(--neutral-900);
+}
+.theme-admonition-danger .admonition-icon svg {
+  fill: var(--neutral-900);
+  stroke: var(--neutral-900);
 }
 
 th {
@@ -677,6 +765,38 @@ pre code {
 }
 [data-theme="dark"] .token.string {
   color: var(--accent-400);
+}
+[data-theme="dark"] .admonition,
+[data-theme="dark"] .theme-admonition,
+[data-theme="dark"] .alert {
+  color: var(--classical-text);
+}
+[data-theme="dark"] .admonition-heading,
+[data-theme="dark"] .alert h5 {
+  color: var(--accent-300);
+}
+[data-theme="dark"] .admonition-icon svg {
+  fill: var(--accent-300);
+  stroke: var(--accent-300);
+}
+[data-theme="dark"] .theme-admonition-caution,
+[data-theme="dark"] .theme-admonition-warning,
+[data-theme="dark"] .alert--warning {
+  border-left-color: var(--accent-400);
+}
+[data-theme="dark"] .theme-admonition-caution .admonition-heading,
+[data-theme="dark"] .theme-admonition-warning .admonition-heading,
+[data-theme="dark"] .alert--warning h5 {
+  color: var(--accent-200);
+}
+[data-theme="dark"] .theme-admonition-danger,
+[data-theme="dark"] .alert--danger {
+  border-left-color: var(--neutral-300);
+  background: color-mix(in srgb, #ffffff 5%, transparent);
+}
+[data-theme="dark"] .theme-admonition-danger .admonition-heading,
+[data-theme="dark"] .alert--danger h5 {
+  color: var(--neutral-100);
 }
 [data-theme="dark"] .breadcrumbs__link,
 [data-theme="dark"] .pagination-nav__sublabel,
