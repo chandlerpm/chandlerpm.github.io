@@ -12,11 +12,28 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Julie Chandler',
   tagline: 'Senior Technical Writer & Knowledge Systems Specialist — documentation for complex systems, from procedural guides to specs to information architecture.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
+
+  stylesheets: [
+    {
+      href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap',
+      type: 'text/css',
+    },
+  ],
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  },
+
+  // v4's forward-compat mode drops support for the legacy ":::info Title"
+  // admonition syntax (title text inline after the type keyword) by default.
+  // All work-sample docs use that syntax, so re-enable it explicitly rather
+  // than rewriting every doc to the new :::info[Title] directive form.
+  markdown: {
+    mdx1Compat: {
+      admonitions: true,
+    },
   },
 
   // Set the production url of your site here
@@ -57,8 +74,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
       },
