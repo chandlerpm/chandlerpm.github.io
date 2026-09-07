@@ -50,7 +50,7 @@ This is an admin-level process for new projects. This assumes the new project ha
 
 ## Working files and server files
 
-Vectorworks has a project file that is saved on the server. You will not be editing this file directly. Instead, you will make a working copy that is saved on your computer. After the first time you create a working file, you do not need to repeat this process — simply open your working file and begin work. If you wish to learn more about how the working files and server files coexist, see the [Project Sharing & Version Control Concepts](project-sharing-workflow.md) guide.
+Vectorworks has a project file that is saved on the server. You will not be editing this file directly. Instead, you will make a working copy that is saved on your computer. After the first time you create a working file, you do not need to repeat this process — simply open your working file and begin work. If you wish to learn more about how the working files and server files coexist, see the [Project Sharing & Version Control Concepts](../conceptual-onboarding/project-sharing-concepts.md) guide.
 
 > **Note:** Some of the old projects weren't converted over to the server/working-file system, because they were closed prior to the firm's adoption of this method. If a file on the server ends in `.vwx`, you may open the file directly.
 

@@ -87,7 +87,7 @@ authoring for a docs-as-code, engineering-team audience.
 
 ### Related Documents
 
-- [Related SOP or doc title](./link)
+- [Related SOP or doc title]
 
 ---
 
