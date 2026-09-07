@@ -69,7 +69,7 @@ The Project Sharing Server tracks who's got what part of a file using **checkout
 ---
 
 ## Save and Commit
-### *aka the other big change to our workflow*
+### *aka the other big change to your workflow*
 
 - **Save** → updates your working file only.
 - **Save and Commit** → merges your changes into the shared project file, along with everyone else's.
