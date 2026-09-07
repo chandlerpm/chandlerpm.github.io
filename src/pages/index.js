@@ -36,8 +36,12 @@ export default function Home() {
       <HomepageHeader />
       <main className="container margin-vert--lg">
         <p>
-          This site is under construction. Work samples are being migrated
-          in from their source repositories.
+          Eleven work samples — reference documentation, onboarding guides,
+          API and support docs, a feature spec, information architecture,
+          and instructional design — drawn from an architecture firm,
+          freelance SaaS work, self-directed projects, and a
+          community-college web development course. Every sample links
+          back to its source repository.
         </p>
       </main>
     </Layout>

@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Julie Chandler',
-  tagline: 'Technical Writing portfolio — under construction',
+  tagline: 'Senior Technical Writer & Knowledge Systems Specialist — documentation for complex systems, from procedural guides to specs to information architecture.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
