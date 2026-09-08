@@ -40,6 +40,24 @@
   --accent-800: #5a3b0a;
   --accent-900: #3a270d;
 
+  /* Theme-aware roles. Every rule below reads these, never a raw ramp step, so
+     one dark-mode block flips the whole sheet. */
+  --tw-ink: var(--classical-text);       /* primary text */
+  --tw-ink-strong: var(--neutral-900);   /* loudest ink (danger rule, code) */
+  --tw-muted: var(--neutral-800);        /* secondary text: subtitles, card body */
+  --tw-faint: var(--neutral-700);        /* meta: dates, breadcrumbs, captions */
+  --tw-fainter: var(--neutral-600);      /* comments, résumé dates */
+  --tw-accent-ink: var(--accent-700);    /* accent used as text on the ground */
+  --tw-accent-ink-strong: var(--accent-800);
+  --tw-accent-line: var(--accent-400);   /* accent hairline on the ground */
+  --tw-accent-line-strong: var(--accent-600);
+  --tw-line-strong: var(--neutral-400);  /* neutral hairline, e.g. secondary button */
+  --tw-line-strongest: var(--neutral-600);
+  --tw-code-bg: var(--neutral-100);
+  --tw-code-ink: var(--neutral-900);
+  --tw-select-bg: var(--accent-200);
+  --tw-select-ink: var(--accent-900);
+
   /* Infima primary ramp mapped onto the accent */
   --ifm-color-primary: var(--accent-600);
   --ifm-color-primary-dark: var(--accent-700);
@@ -188,8 +206,8 @@ button:focus-visible,
 }
 
 ::selection {
-  background: var(--accent-200);
-  color: var(--accent-900);
+  background: var(--tw-select-bg);
+  color: var(--tw-select-ink);
 }
 
 /* ─── Navbar ─────────────────────────────────────────────────────────────── */
@@ -216,7 +234,7 @@ button:focus-visible,
 .navbar__link:hover,
 .navbar__link--active {
   border-bottom-color: var(--classical-accent);
-  color: var(--accent-700);
+  color: var(--tw-accent-ink);
 }
 
 /* ─── Buttons: accent outline, never a fill ──────────────────────────────── */
@@ -226,7 +244,7 @@ button:focus-visible,
 .button--secondary {
   background: transparent;
   border: 1px solid var(--classical-accent);
-  color: var(--accent-700);
+  color: var(--tw-accent-ink);
   font-family: var(--ifm-font-family-base);
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -234,21 +252,21 @@ button:focus-visible,
 }
 .button:hover {
   background: color-mix(in srgb, var(--classical-accent) 10%, transparent);
-  border-color: var(--accent-600);
-  color: var(--accent-800);
+  border-color: var(--tw-accent-line-strong);
+  color: var(--tw-accent-ink-strong);
 }
 .button:active {
   background: color-mix(in srgb, var(--classical-accent) 18%, transparent);
-  border-color: var(--accent-700);
+  border-color: var(--tw-accent-ink);
 }
 .button--secondary {
-  border-color: var(--neutral-400);
-  color: var(--neutral-800);
+  border-color: var(--tw-line-strong);
+  color: var(--tw-muted);
 }
 .button--secondary:hover {
   background: color-mix(in srgb, var(--classical-text) 5%, transparent);
-  border-color: var(--neutral-600);
-  color: var(--classical-text);
+  border-color: var(--tw-line-strongest);
+  color: var(--tw-ink);
 }
 
 /* ─── Landing hero ───────────────────────────────────────────────────────── */
@@ -271,7 +289,7 @@ button:focus-visible,
   font-weight: 400;
   line-height: 1.65;
   max-width: 58ch;
-  color: var(--neutral-800);
+  color: var(--tw-muted);
   text-wrap: pretty;
 }
 
@@ -282,7 +300,7 @@ button:focus-visible,
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent-700);
+  color: var(--tw-accent-ink);
   margin-bottom: 0.9rem;
 }
 
@@ -330,7 +348,7 @@ button:focus-visible,
 }
 .card__body {
   padding-top: 0;
-  color: var(--neutral-800);
+  color: var(--tw-muted);
   font-size: 0.95rem;
 }
 .card__footer {
@@ -349,13 +367,13 @@ button:focus-visible,
   font-weight: 500;
   letter-spacing: 0.04em;
   padding: 0.3rem 0.6rem;
-  border: 1px solid var(--accent-400);
+  border: 1px solid var(--tw-accent-line);
   background: transparent;
-  color: var(--accent-800);
+  color: var(--tw-accent-ink-strong);
 }
 .badge--secondary {
-  border-color: var(--neutral-400);
-  color: var(--neutral-800);
+  border-color: var(--tw-line-strong);
+  color: var(--tw-muted);
   background: transparent;
 }
 
@@ -389,7 +407,7 @@ button:focus-visible,
   border-radius: 0;
 }
 .menu__link--active:not(.menu__link--sublist) {
-  color: var(--accent-700);
+  color: var(--tw-accent-ink);
   font-weight: 600;
   background: transparent;
   box-shadow: inset 2px 0 0 var(--classical-accent);
@@ -404,10 +422,10 @@ button:focus-visible,
 .breadcrumbs__link {
   background: transparent;
   padding: 0;
-  color: var(--neutral-700);
+  color: var(--tw-faint);
 }
 .breadcrumbs__item--active .breadcrumbs__link {
-  color: var(--neutral-800);
+  color: var(--tw-muted);
   background: transparent;
 }
 
@@ -417,10 +435,10 @@ button:focus-visible,
   border-left: 1px solid var(--ifm-hr-border-color);
 }
 .table-of-contents__link:hover {
-  color: var(--accent-700);
+  color: var(--tw-accent-ink);
 }
 .table-of-contents__link--active {
-  color: var(--accent-700);
+  color: var(--tw-accent-ink);
   font-weight: 600;
 }
 
@@ -437,7 +455,7 @@ button:focus-visible,
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--neutral-700);
+  color: var(--tw-faint);
 }
 .pagination-nav__label {
   font-family: var(--ifm-heading-font-family);
@@ -483,12 +501,12 @@ blockquote {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent-700);
+  color: var(--tw-accent-ink);
   margin-bottom: 0.6rem;
 }
 .admonition-icon svg {
-  fill: var(--accent-700);
-  stroke: var(--accent-700);
+  fill: var(--tw-accent-ink);
+  stroke: var(--tw-accent-ink);
   width: 1.1em;
   height: 1.1em;
 }
@@ -499,7 +517,7 @@ blockquote {
 }
 .alert a,
 .admonition a {
-  color: var(--accent-700);
+  color: var(--tw-accent-ink);
   text-decoration-color: color-mix(in srgb, var(--classical-accent) 55%, transparent);
 }
 
@@ -518,40 +536,40 @@ blockquote {
 .alert--secondary h5,
 .alert--info h5,
 .alert--success h5 {
-  color: var(--accent-700);
+  color: var(--tw-accent-ink);
 }
 
 /* caution / warning — one step deeper */
 .theme-admonition-caution,
 .theme-admonition-warning,
 .alert--warning {
-  border-left-color: var(--accent-700);
+  border-left-color: var(--tw-accent-line-strong);
   background: color-mix(in srgb, var(--classical-accent) 5%, transparent);
 }
 .theme-admonition-caution .admonition-heading,
 .theme-admonition-warning .admonition-heading,
 .alert--warning h5 {
-  color: var(--accent-800);
+  color: var(--tw-accent-ink-strong);
 }
 .theme-admonition-caution .admonition-icon svg,
 .theme-admonition-warning .admonition-icon svg {
-  fill: var(--accent-800);
-  stroke: var(--accent-800);
+  fill: var(--tw-accent-ink-strong);
+  stroke: var(--tw-accent-ink-strong);
 }
 
 /* danger — ink, so it reads as the loudest without a second hue */
 .theme-admonition-danger,
 .alert--danger {
-  border-left-color: var(--neutral-900);
+  border-left-color: var(--tw-ink-strong);
   background: color-mix(in srgb, var(--classical-text) 4%, transparent);
 }
 .theme-admonition-danger .admonition-heading,
 .alert--danger h5 {
-  color: var(--neutral-900);
+  color: var(--tw-ink-strong);
 }
 .theme-admonition-danger .admonition-icon svg {
-  fill: var(--neutral-900);
-  stroke: var(--neutral-900);
+  fill: var(--tw-ink-strong);
+  stroke: var(--tw-ink-strong);
 }
 
 th {
@@ -571,7 +589,7 @@ td {
 code {
   border: 1px solid color-mix(in srgb, var(--classical-accent) 25%, transparent);
   background: color-mix(in srgb, var(--classical-accent) 8%, transparent);
-  color: var(--accent-800);
+  color: var(--tw-accent-ink-strong);
   padding: 0.08em 0.32em;
 }
 
@@ -582,13 +600,14 @@ pre,
   box-shadow: none;
 }
 pre {
-  background: var(--neutral-100);
+  background: var(--tw-code-bg);
+  color: var(--tw-code-ink);
   font-size: 0.86rem;
 }
 pre code {
   border: 0;
   background: none;
-  color: var(--neutral-900);
+  color: var(--tw-code-ink);
 }
 .theme-code-block pre {
   border: 0;
@@ -600,30 +619,30 @@ pre code {
   font-family: var(--ifm-font-family-monospace);
   font-size: 0.76rem;
   letter-spacing: 0.04em;
-  color: var(--neutral-700);
+  color: var(--tw-faint);
 }
 .token.comment,
 .token.prolog,
 .token.doctype {
-  color: var(--neutral-600);
+  color: var(--tw-fainter);
   font-style: italic;
 }
 .token.keyword,
 .token.tag,
 .token.selector {
-  color: var(--accent-800);
+  color: var(--tw-accent-ink-strong);
 }
 .token.string,
 .token.attr-value {
-  color: var(--accent-700);
+  color: var(--tw-accent-ink);
 }
 .token.function,
 .token.attr-name {
-  color: var(--neutral-800);
+  color: var(--tw-muted);
 }
 .token.number,
 .token.boolean {
-  color: var(--accent-600);
+  color: var(--tw-accent-line-strong);
 }
 
 /* ─── Images: matted like a tipped-in plate ──────────────────────────────── */
@@ -658,7 +677,7 @@ pre code {
   font-feature-settings: "tnum";
   font-size: 0.82rem;
   letter-spacing: 0.08em;
-  color: var(--neutral-600);
+  color: var(--tw-fainter);
   padding: 1.3rem 0;
   border-top: 1px solid var(--ifm-hr-border-color);
 }
@@ -687,18 +706,39 @@ pre code {
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent-700);
+  color: var(--ifm-footer-title-color);
 }
 .footer__items {
   font-size: 0.92rem;
 }
+
+/* Docusaurus adds .footer--dark when footer.style is "dark" in the config, which
+   overrides the link and title colors with its own near-white — invisible on this
+   paper footer. Both cases are pinned to the theme's ink here. */
+.footer,
+.footer--dark {
+  --ifm-footer-background-color: transparent;
+  --ifm-footer-color: var(--tw-muted);
+  --ifm-footer-link-color: var(--tw-muted);
+  --ifm-footer-title-color: var(--tw-accent-ink);
+  background: transparent;
+  color: var(--ifm-footer-color);
+}
+
+.footer__link-item {
+  color: var(--ifm-footer-link-color);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--classical-text) 22%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
 .footer__link-item:hover {
-  color: var(--accent-800);
+  color: var(--tw-accent-ink-strong);
   text-decoration-color: var(--classical-accent);
 }
 .footer__copyright {
   font-size: 0.8rem;
-  color: var(--neutral-700);
+  color: var(--tw-faint);
   padding-top: 1.5rem;
   border-top: 1px solid var(--ifm-hr-border-color);
 }
@@ -737,72 +777,50 @@ pre code {
   --docusaurus-highlighted-code-line-bg: color-mix(in srgb, var(--classical-accent) 20%, transparent);
 }
 
+/* Only the roles are reassigned; the rules above follow. */
+[data-theme="dark"] {
+  --tw-ink: var(--classical-text);
+  --tw-ink-strong: var(--neutral-100);
+  --tw-muted: var(--neutral-300);
+  --tw-faint: var(--neutral-300);
+  --tw-fainter: var(--neutral-400);
+  --tw-accent-ink: var(--accent-300);
+  --tw-accent-ink-strong: var(--accent-200);
+  --tw-accent-line: var(--accent-600);
+  --tw-accent-line-strong: var(--accent-400);
+  --tw-line-strong: var(--neutral-600);
+  --tw-line-strongest: var(--neutral-400);
+  --tw-code-bg: #221f1e;
+  --tw-code-ink: var(--neutral-200);
+  --tw-select-bg: var(--accent-800);
+  --tw-select-ink: var(--accent-100);
+}
+
+/* The few places dark needs its own value rather than a remapped role. */
 [data-theme="dark"] .button,
 [data-theme="dark"] .button--primary {
   border-color: var(--accent-400);
-  color: var(--accent-300);
 }
 [data-theme="dark"] .button:hover {
   background: color-mix(in srgb, var(--classical-accent) 16%, transparent);
   border-color: var(--accent-300);
-  color: var(--accent-200);
-}
-[data-theme="dark"] .badge {
-  border-color: var(--accent-600);
-  color: var(--accent-300);
 }
 [data-theme="dark"] code {
   border-color: color-mix(in srgb, var(--classical-accent) 30%, transparent);
   background: color-mix(in srgb, var(--classical-accent) 14%, transparent);
-  color: var(--accent-300);
-}
-[data-theme="dark"] pre code {
-  color: var(--neutral-200);
-}
-[data-theme="dark"] .token.keyword,
-[data-theme="dark"] .token.tag {
-  color: var(--accent-300);
-}
-[data-theme="dark"] .token.string {
-  color: var(--accent-400);
-}
-[data-theme="dark"] .admonition,
-[data-theme="dark"] .theme-admonition,
-[data-theme="dark"] .alert {
-  color: var(--classical-text);
-}
-[data-theme="dark"] .admonition-heading,
-[data-theme="dark"] .alert h5 {
-  color: var(--accent-300);
-}
-[data-theme="dark"] .admonition-icon svg {
-  fill: var(--accent-300);
-  stroke: var(--accent-300);
-}
-[data-theme="dark"] .theme-admonition-caution,
-[data-theme="dark"] .theme-admonition-warning,
-[data-theme="dark"] .alert--warning {
-  border-left-color: var(--accent-400);
-}
-[data-theme="dark"] .theme-admonition-caution .admonition-heading,
-[data-theme="dark"] .theme-admonition-warning .admonition-heading,
-[data-theme="dark"] .alert--warning h5 {
-  color: var(--accent-200);
 }
 [data-theme="dark"] .theme-admonition-danger,
 [data-theme="dark"] .alert--danger {
-  border-left-color: var(--neutral-300);
   background: color-mix(in srgb, #ffffff 5%, transparent);
 }
-[data-theme="dark"] .theme-admonition-danger .admonition-heading,
-[data-theme="dark"] .alert--danger h5 {
-  color: var(--neutral-100);
+[data-theme="dark"] .footer,
+[data-theme="dark"] .footer--dark {
+  --ifm-footer-color: var(--neutral-200);
+  --ifm-footer-link-color: var(--neutral-200);
+  --ifm-footer-title-color: var(--accent-300);
 }
-[data-theme="dark"] .breadcrumbs__link,
-[data-theme="dark"] .pagination-nav__sublabel,
-[data-theme="dark"] .footer__copyright,
-[data-theme="dark"] .table-of-contents__link {
-  color: var(--neutral-300);
+[data-theme="dark"] .footer__link-item {
+  text-decoration-color: color-mix(in srgb, #ffffff 25%, transparent);
 }
 [data-theme="dark"] .plate img {
   filter: sepia(0.1) saturate(0.9) contrast(1.02) brightness(0.94);
