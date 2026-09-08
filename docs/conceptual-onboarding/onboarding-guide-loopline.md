@@ -15,7 +15,7 @@ self-serve reference for common problems.
 
 ## Welcome to Loopline
 
-**Last updated:** 2025-01 · **Audience:** New users · **Reading time:** ~5 minutes
+**Last updated:** 2026-07 · **Audience:** New users · **Reading time:** ~5 minutes
 
 ---
 

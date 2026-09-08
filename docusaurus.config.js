@@ -14,13 +14,6 @@ const config = {
   tagline: 'Senior Technical Writer & Knowledge Systems Specialist — documentation for complex systems, from procedural guides to specs to information architecture.',
   favicon: 'img/favicon.svg',
 
-  stylesheets: [
-    {
-      href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap',
-      type: 'text/css',
-    },
-  ],
-
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
