@@ -74,7 +74,7 @@ const config = {
       navbar: {
         title: 'Julie Chandler',
         items: [
-          {to: '/', label: 'Work', position: 'left'},
+          {to: '/', label: 'Work', position: 'left', activeBaseRegex: '^/$'},
           {
             type: 'docSidebar',
             sidebarId: 'workSamplesSidebar',
