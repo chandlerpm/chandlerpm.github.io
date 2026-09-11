@@ -73,21 +73,18 @@ const config = {
       },
       navbar: {
         title: 'Julie Chandler',
-        logo: {
-          alt: 'Julie Chandler',
-          src: 'img/logo.svg',
-        },
         items: [
+          {to: '/', label: 'Work', position: 'left'},
           {
             type: 'docSidebar',
             sidebarId: 'workSamplesSidebar',
             position: 'left',
-            label: 'Work Samples',
+            label: 'Writing samples',
           },
           {to: '/about', label: 'About', position: 'left'},
           {
-            href: 'https://github.com/chandlerpm',
-            label: 'GitHub',
+            href: 'mailto:chandlerpm@protonmail.com',
+            label: 'Contact',
             position: 'right',
           },
         ],
@@ -96,20 +93,24 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Work Samples',
+            title: 'Work',
             items: [
               {
-                label: 'Browse all',
+                label: 'Writing samples',
                 to: '/docs',
+              },
+              {
+                label: 'About',
+                to: '/about',
               },
             ],
           },
           {
-            title: 'Contact',
+            title: 'Elsewhere',
             items: [
               {
-                label: 'Email',
-                href: 'mailto:chandlerpm@protonmail.com',
+                label: 'GitHub',
+                href: 'https://github.com/chandlerpm',
               },
               {
                 label: 'LinkedIn',
@@ -118,11 +119,11 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: 'Contact',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/chandlerpm',
+                label: 'chandlerpm@protonmail.com',
+                href: 'mailto:chandlerpm@protonmail.com',
               },
             ],
           },
