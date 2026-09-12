@@ -21,7 +21,7 @@ function HomepageHeader() {
             Browse Work Samples
           </Link>
           <Link className="button button--secondary button--lg" to="/about">
-            About &amp; r&eacute;sum&eacute;
+            About
           </Link>
         </div>
       </div>
